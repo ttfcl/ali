@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>알리 할인이벤트</title>
+    <title>웹포스터 문의</title>
+    
 </head>
 <body>
-    
+    <div class="container">
+        <img src="main.png" alt="웹포스터">
+        <div class="form-container">
+            <img src="main2.png" alt="서브포스터">
+            <form class="gform" action="https://script.google.com/macros/s/AKfycbzzXgm7H8uTQCjPS_fm2NebGCY64sM3c2pr9AFN0a3WuwbFPNAn6De8qUUxLPc8KmZqWQ/exec" method="POST" data-email="ktx1016@naver.com">
+                <fieldset>
+                  <div class="box-input section3RightBoxContent">
+                    <input type="text" id="userName" name="성함" placeholder="성함" required>
+                  </div>
+                  <div class="box-input section3RightBoxContent">
+                    <input type="text" id="userEmail1" name="전화번호" placeholder="기호 '-'를 제외한 전화번호" required>
+                  </div>
+                  <div class="box-input">
+                    <button type="submit" class="btn-send 전송버튼">신청하기</button>
+                  </div>
+                  <div style="display:none" class="thankyou_message">
+                    <!-- You can customize the thankyou message by editing the code below -->
+                    <p style="font-size: 18px; text-align: center;">연락주셔서 감사합니다. 빠른 시일 내에 답변 드리겠습니다.</p>
+                    </h2>
+                   </div>
+                </fieldset>
+              </form>
+        </div>
+    </div>
+    <style>
+        @font-face {
+            font-family: "gFont";
+            src: url("폰트/Pretendard-Regular.ttf") format('truetype');
+            font-display: swap;
+            font-style: normal;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            background: #ff8caf;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        fieldset {
+            border: none;
+        }
+        p {
+            color: white;
+            font-size: 32px;
+            font-family: "gFont";    
+            font-weight: bold;
+        }
+        h5 {
+            color: white;
+            font-family: "gFont";    
+            font-weight: bold;
+        }
+        input {
+            width: 90%;
+            height: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid seashell;
+        }
+        button {
+            width: 92%;
+            padding: 12px;
+            background: #ff66b2;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #ff3385;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="form-submission-handler.js"></script>
 </body>
 </html>
